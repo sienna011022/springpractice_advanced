@@ -1,19 +1,17 @@
-package com.practice.advanced.v3;
+package com.practice.advanced.v4;
 
 
-import com.practice.advanced.HelloTraceV2;
 import com.practice.advanced.logtrace.FieldLogTrace;
-import com.practice.advanced.logtrace.LogTrace;
-import com.practice.advanced.trace.TraceId;
+import com.practice.advanced.logtrace.ThreadLocalLogTrace;
 import com.practice.advanced.trace.TraceStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-class OrderRepositoryV3 {
+class OrderRepositoryV4 {
 
-  private final FieldLogTrace trace;
+  private final ThreadLocalLogTrace trace;
 
   public void save(String itemId) {
 
